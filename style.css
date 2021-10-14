@@ -197,8 +197,8 @@ p {
     width: 20px;
     background-color: rgb(199, 50, 50);
     cursor: pointer;
-    animation: 3s linear 0s normal none running color;
-    -webkit-animation: 2s linear 0s normal none running color;
+    animation: 3s linear 0s normal none running color2;
+    -webkit-animation: 2s linear 0s normal none running color2;
   }
 }
 
@@ -432,6 +432,16 @@ footer:hover {
   }
   100% {
     color: rgb(0, 0, 0);
+  }
+}
+
+@keyframes color2 {
+  0% {
+    background-color: black;
+  }
+
+  100% {
+    border-color: rgb(199, 50, 50);
   }
 }
 
