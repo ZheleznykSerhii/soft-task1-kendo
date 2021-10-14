@@ -212,7 +212,7 @@ p {
   .logo {
     position: fixed;
     top: 0;
-    right: 35%;
+    left: 5%;
   }
 }
 
@@ -363,10 +363,7 @@ p {
 }
 
 #bgimage {
-  margin: 0, auto;
   opacity: 0.01;
-  max-height: 800px;
-  width: 100%;
   animation: 2.5s linear 0s normal none running bgimage-opacity;
   -webkit-animation: 2.5s linear 0s normal none running bgimage-opacity;
   position: absolute;
@@ -485,4 +482,19 @@ footer:hover {
 .clear3 {
   height: 150px;
   background-color: rgb(255, 255, 255);
+}
+
+@media (max-width: 767px) {
+  .fan-comment-fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .button {
+    margin-top: 10px;
+  }
 }
