@@ -226,17 +226,21 @@ p {
     position: relative;
     text-align: center;
     padding-top: 30px;
+    transition: transform 0.3s ease-in-out;
+    background-color: white;
+    border: none;
+    z-index: 3;
+    border: 1px solid rgb(253, 0, 0);
+    padding: 1px;
   }
 }
 
-.navbar {
-  background-color: rgb(199, 50, 50);
-  height: 100px;
-  width: 100%;
-  text-align: center;
-  position: fixed;
-  z-index: 2;
-  top: 0;
+@media (max-width: 767px) {
+  .navbar a:hover {
+    background-color: rgb(199, 50, 50);
+    transform: translateX(0.1px);
+    color: white;
+  }
 }
 
 @media (max-width: 767px) {
@@ -245,6 +249,7 @@ p {
     flex-direction: column;
     height: 100px;
     width: 100px;
+    text-align: center;
   }
 }
 /*Знаю, що так робити точно не варто, проте лише силами сss поки що так*/
@@ -252,21 +257,21 @@ p {
   .sub-menu-ul:first-child {
     position: fixed;
     top: 50px;
-    left: 100px;
+    left: 125px;
   }
 }
 @media (max-width: 767px) {
   .sub-menu-ul:nth-child(2) {
     position: fixed;
     top: 100px;
-    left: 100px;
+    left: 125px;
   }
 }
 @media (max-width: 767px) {
   .sub-menu-ul:nth-child(3) {
     position: fixed;
     top: 150px;
-    left: 100px;
+    left: 125px;
   }
 }
 
