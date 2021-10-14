@@ -10,29 +10,54 @@
 <body>
     <div class="wrapper ">
     <nav class="navbar">
+        <div class="burger"><span></span>
+            <div class="burger-menu">
+                <ul class="navigation width-content">
+                    <li class="navlink checked"><a href="index.html">Main</a></li>
+                    <li class="navlink"><a href="#">Matches</a>
+                        <div class="sub-menu">
+                        <ul class="sub-menu-ul">
+                            <li class="navlink "><a href="index.html">Main</a></li>
+                        </ul>
+                        <ul class="sub-menu-ul">
+                            <li class="navlink checked"><a href="fans.html">Fans</a></li>
+                        </ul></div>
+                    </li>
+                    <li class="navlink"><a href="#">News</a></li>
+                    <li class="navlink"><a href="fans.html">Fans</a></li>
+                    <li class="navlink"><a href="#">Contacts</a></li>
+                    <li class="navlink"><a href="#">Admin</a></li>
+                </ul>
+            </div>
+            
+        </div>
         <div class="flex">
             <ul class="navigation width-content">
                 <li class="navlink "><a href="index.html">Main</a></li>
                 <li class="navlink"><a href="#">Matches</a>
                     <div class="sub-menu">
-                    <ul class="sub-menu-ul">
-                        <li class="navlink-touched"><a href="index.html">Main</a></li>
-                    </ul>
-                    <ul class="sub-menu-ul">
-                        <li class="navlink-touched"><a href="fans.html">Fans</a></li>
-                    </ul></div>
+                        <ul class="sub-menu-ul">
+                            <li class="navlink checked "><a href="index.html">Calender of maches</a></li>
+                        </ul>
+                        <ul class="sub-menu-ul">
+                            <li class="navlink"><a href="fans.html">Next game</a></li>
+                        </ul>
+                        <ul class="sub-menu-ul">
+                            <li class="navlink"><a href="fans.html">Rating</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="navlink"><a href="#">News</a></li>
                 <li class="navlink checked"><a href="fans.html">Fans</a></li>
                 <li class="navlink"><a href="#">Contacts</a></li>
                 <li class="navlink"><a href="#">Admin</a></li>
             </ul>
-        <div class="logo "><img src="./img/kendo-icons-6.png" alt="" srcset=""></div>
+        <div class="logo "><img src="/img/Logo.png" alt="" srcset=""></div>
     </div>  
     </nav>
     <div class="clear3"></div>
         <content class="content-fans">
-            <div id="bgimage"><img src="./img/favpng_young-samurai-the-way-of-the-sword-kenjutsu-kendo-japanese-martial-arts.png"></div>
+            <div id="bgimage"><img src="/img/favpng_young-samurai-the-way-of-the-sword-kenjutsu-kendo-japanese-martial-arts.png"></div>
                <h2 class="section-hedaer">Звернення</h2>
                <div id="bgimage"></div>
                <div class="text-content text-content-fan "><div c></div>
@@ -54,7 +79,7 @@
                 <div class="username">Petro Ivanovych</div>
             </div>
         </div>
-        <div class="fan-comment-fields flex text-content">
+        <div class="fan-comment-fields flex-spb text-content">
 <textarea name="fan-message" id="fan-message" placeholder="Написати звернення..."></textarea>
 <button class="button">Send</button>
         </div>

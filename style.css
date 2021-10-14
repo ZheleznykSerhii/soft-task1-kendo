@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300&display=swap');
 /* base*/
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Mukta', sans-serif;
   background-color: rgb(255, 255, 255);
   font-size: 18px;
 }
@@ -28,37 +28,13 @@ img {
 .wrapper {
   margin: 0 auto;
   max-width: 100%;
-  position: relative;
 }
 
-/* utilities*/
-
-.flex {
-  display: flex;
-  justify-content: space-around;
-  height: 100%;
-}
-.button {
-  height: 30px;
-  width: 120px;
-  background-color: rgb(0, 0, 0);
-  border-radius: 3px;
-  cursor: pointer;
-  position: relative;
-  color: white;
-}
-.button:hover {
-  background-color: rgb(199, 50, 50);
-  box-shadow: 5px 5px 5px 3px rgba(255, 0, 0, 0.2);
-}
-.clear {
-  height: 50px;
-  background-color: rgb(255, 255, 255);
-}
-
-.clear3 {
-  height: 150px;
-  background-color: rgb(255, 255, 255);
+p {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  text-indent: 30px;
 }
 
 /* navbar*/
@@ -85,7 +61,7 @@ img {
   width: 100px;
   text-align: center;
   color: black;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   transition: transform 0.3s ease-in-out;
   position: relative;
@@ -95,7 +71,7 @@ img {
 
 .navbar a:hover {
   background-color: rgb(199, 50, 50);
-  transform: translateY(10px);
+  transform: translateY(5px);
   color: white;
 }
 
@@ -116,16 +92,13 @@ img {
 .navlink {
   border: 1px rgb(255, 0, 0) solid;
   background-color: rgb(199, 50, 50);
-  animation: 3s linear 0s normal none running color;
-  -webkit-animation: 3s linear 0s normal none running color;
+  animation: 2s linear 0s normal none running color;
+  -webkit-animation: 2s linear 0s normal none running color;
 }
 
 .navlink-touched {
   border: 1px rgb(199, 50, 50) solid;
   background-color: rgb(255, 255, 255);
-}
-
-.navlink-touched:hover {
 }
 
 .logo {
@@ -141,8 +114,7 @@ img {
   max-height: 700px;
   max-width: 800px;
   margin: 0 auto;
-  animation: 1.5s linear 0s normal none running opacity;
-  -webkit-animation: 1.5s linear 0s normal none running opacity;
+  transition: all 1000ms;
 }
 
 .text-content {
@@ -161,16 +133,11 @@ img {
   margin-bottom: 50px;
 }
 
-.paragraph {
-  text-indent: 30px;
-  padding-top: 10px;
-}
-
 .footer {
   background-color: rgb(199, 50, 50);
   height: 100px;
   position: relative;
-  bottom: 100%;
+  width: 100%;
 }
 
 .footer-text {
@@ -211,6 +178,140 @@ img {
   100% {
     opacity: 1;
   }
+}
+
+/*media*/
+
+.burger {
+  display: none;
+  z-index: 100;
+}
+
+@media (max-width: 767px) {
+  .burger {
+    margin-left: 25px;
+    margin-top: 35px;
+    display: block;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(199, 50, 50);
+    cursor: pointer;
+    animation: 3s linear 0s normal none running color;
+    -webkit-animation: 2s linear 0s normal none running color;
+  }
+}
+
+@media (max-width: 767px) {
+  .navlink {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .logo {
+    position: fixed;
+    top: 0;
+    right: 5%;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar a {
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+    position: relative;
+    text-align: center;
+    padding-top: 30px;
+  }
+}
+
+.navbar {
+  background-color: rgb(199, 50, 50);
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+}
+
+@media (max-width: 767px) {
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 100px;
+  }
+}
+/*Знаю, що так робити точно не варто, проте лише силами сss поки що так*/
+@media (max-width: 767px) {
+  .sub-menu-ul:first-child {
+    position: fixed;
+    top: 50px;
+    left: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .sub-menu-ul:nth-child(2) {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .sub-menu-ul:nth-child(3) {
+    position: fixed;
+    top: 150px;
+    left: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navigation > li:hover .sub-menu {
+    position: fixed;
+    top: 50px;
+    left: 100px;
+  }
+}
+
+.burger:before,
+.burger:after {
+  content: '';
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+}
+.burger:before {
+  top: 0;
+}
+
+.burger:after {
+  bottom: 0;
+}
+
+.burger span {
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  top: 9px;
+}
+.burger-menu {
+  display: none;
+}
+
+.burger:hover .burger-menu {
+  display: block;
+}
+.burger:hover .navlink {
+  display: block;
 }
 
 /*fans page*/
@@ -267,9 +368,14 @@ img {
   left: 40%;
 }
 
+footer:hover {
+  animation: 4s linear 0s normal none running color-userpost;
+  -webkit-animation: 4s linear 0s normal none running color-userpost;
+}
+
 @keyframes text-content-fan-move {
   0% {
-    transform: translateX(2000px);
+    transform: translateX(1500px);
   }
 
   100% {
@@ -279,7 +385,7 @@ img {
 
 @keyframes text-content-fields-move {
   0% {
-    transform: translateY(2000px);
+    transform: translateY(1500px);
   }
 
   100% {
@@ -313,110 +419,55 @@ img {
   }
 }
 
-/*media*/
+@keyframes color-userpost {
+  0% {
+    color: rgb(0, 0, 0);
+  }
+  33% {
+    color: rgb(255, 255, 255);
+  }
 
-.burger {
-  display: none;
-  z-index: 100;
-}
-
-@media (max-width: 767px) {
-  .burger {
-    margin-left: 25px;
-    margin-top: 35px;
-    display: block;
-    position: relative;
-    height: 20px;
-    width: 20px;
-    background-color: rgb(199, 50, 50);
-    cursor: pointer;
+  66% {
+    color: red;
+  }
+  100% {
+    color: rgb(0, 0, 0);
   }
 }
 
-@media (max-width: 767px) {
-  .navlink {
-    display: none;
-  }
+/* utilities*/
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
 }
 
-@media (max-width: 767px) {
-  .logo {
-    position: fixed;
-    top: 0;
-    right: 5%;
-  }
+.flex-spb {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
 }
 
-@media (max-width: 767px) {
-  .navbar a {
-    height: 100px;
-    width: 100px;
-    text-align: center;
-    color: black;
-    font-size: 12px;
-    position: relative;
-    text-align: center;
-    padding-top: 30px;
-  }
+.button {
+  height: 30px;
+  width: 180px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  color: white;
 }
-
-.navbar {
+.button:hover {
   background-color: rgb(199, 50, 50);
-  height: 100px;
-  width: 100%;
-  text-align: center;
-  position: fixed;
-  z-index: 2;
-  top: 0;
+  box-shadow: 5px 5px 5px 3px rgba(255, 0, 0, 0.2);
+}
+.clear {
+  height: 50px;
+  background-color: rgb(255, 255, 255);
 }
 
-@media (max-width: 767px) {
-  .navbar ul {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 767px) {
-  .navigation > li:hover .sub-menu {
-    position: fixed;
-    top: 50px;
-    left: 100px;
-  }
-}
-
-.burger:before,
-.burger:after {
-  content: '';
-  background-color: rgb(0, 0, 0);
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  left: 0;
-}
-.burger:before {
-  top: 0;
-}
-
-.burger:after {
-  bottom: 0;
-}
-
-.burger span {
-  position: absolute;
-  background-color: rgb(0, 0, 0);
-  left: 0;
-  width: 100%;
-  height: 2px;
-  top: 9px;
-}
-.burger-menu {
-  display: none;
-}
-
-.burger:hover .burger-menu {
-  display: block;
-}
-.burger:hover .navlink {
-  display: block;
+.clear3 {
+  height: 150px;
+  background-color: rgb(255, 255, 255);
 }
