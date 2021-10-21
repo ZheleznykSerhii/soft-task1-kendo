@@ -336,14 +336,14 @@ p {
 .date {
   font-size: 14px;
   font-weight: bold;
-  animation: 4s linear 0s normal none running text-opacity;
-  -webkit-animation: 4s linear 0s normal none running text-opacity;
+  animation: 2s linear 0s normal none running text-opacity;
+  -webkit-animation: 2s linear 0s normal none running text-opacity;
 }
 
 .username {
   font-weight: bold;
-  animation: 4s linear 0s normal none running text-opacity;
-  -webkit-animation: 4s linear 0s normal none running text-opacity;
+  animation: 2s linear 0s normal none running text-opacity;
+  -webkit-animation: 2s linear 0s normal none running text-opacity;
 }
 
 .fan-comment-fields {
