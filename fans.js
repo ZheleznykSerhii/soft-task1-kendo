@@ -2,15 +2,10 @@ document.querySelector('button').onclick = addPost
 
 function addPost() {
   let textMessage = document.getElementById('fan-message').value
-
   let currentDate = new Date()
 
-  if (textMessage.length < 1 || textMessage.trim() == '') {
-    alert('Введіть мінімум один символ')
-  } else if (textMessage.indexOf('>') > -1 && textMessage.indexOf('<') > -1) {
-    alert(
-      'Будь ласка, не використовуйте теги у коментарях. Я з часом перепишу через map список повідомлень і тоді можна буде використовувати <>'
-    )
+  if (textMessage.length < 2) {
+    alert('Введіть більше одного символу')
   } else {
     document.querySelector('.lastHardcode').insertAdjacentHTML(
       'beforeend',
