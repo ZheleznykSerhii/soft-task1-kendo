@@ -16,9 +16,9 @@ function addPost() {
   } else {
     document.querySelector('.lastHardcode').insertAdjacentHTML(
       'beforeend',
-      '<div class="text-content text-content-fan "><div>' +
+      '<div class="text-content text-content-fan "><div></div> <p class="paragraph">' +
         textMessage +
-        '</div> <p class="paragraph"></p> <div class="fotter-message flex"><div class="date">' +
+        '</p> <div class="fotter-message flex"><div class="date">' +
         currentDate.toLocaleString([], {
           dateStyle: 'short',
           timeStyle: 'short',
