@@ -4,14 +4,21 @@ function addPost() {
   let textMessage = document.getElementById('fan-message').value
   let currentDate = new Date()
 
-  if (textMessage.length < 2) {
+  if (textMessage.length < 2 || textMessage.trim() === '') {
     alert('Введіть більше одного символу')
+  } else if (
+    (textMessage.indexOf('>') > -1 && textMessage.indexOf('<') > -1) ||
+    textMessage.indexOf('<') === 0
+  ) {
+    alert(
+      'Будь ласка, не використовуйте теги у коментарях. Я з часом перепишу через map список повідомлень і тоді можна буде використовувати <>'
+    )
   } else {
     document.querySelector('.lastHardcode').insertAdjacentHTML(
       'beforeend',
-      '<div class="text-content text-content-fan "><div></div> <p class="paragraph">' +
+      '<div class="text-content text-content-fan "><div>' +
         textMessage +
-        '</p> <div class="fotter-message flex"><div class="date">' +
+        '</div> <p class="paragraph"></p> <div class="fotter-message flex"><div class="date">' +
         currentDate.toLocaleString([], {
           dateStyle: 'short',
           timeStyle: 'short',
