@@ -13,7 +13,7 @@ function addPost() {
       'Будь ласка, не використовуйте у одному коментарі обидва символи "<" ">" одночасно, не починайте коментар с символу "<". Я з часом перепишу через map список повідомлень і тоді можна буде використовувати <>'
     )
   } else {
-    document.querySelector('.afterHardcode').insertAdjacentHTML(
+    document.querySelector('.lastHardcode').insertAdjacentHTML(
       'beforeend',
       '<div class="text-content text-content-fan "><p class="paragraph">' +
         textMessage +
