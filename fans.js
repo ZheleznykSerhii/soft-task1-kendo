@@ -15,7 +15,7 @@ function addPost() {
   } else {
     document.querySelector('.afterHardcode').insertAdjacentHTML(
       'beforeend',
-      '<div class="text-content text-content-fan "><div></div> <p class="paragraph">' +
+      '<div class="text-content text-content-fan "><p class="paragraph">' +
         textMessage +
         '</p> <div class="fotter-message flex"><div class="date">' +
         new Date().toLocaleString([], {
